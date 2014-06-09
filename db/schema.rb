@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609002911) do
+ActiveRecord::Schema.define(version: 20140609003608) do
 
   create_table "households", force: true do |t|
     t.string   "name",                   default: "temp", null: false
@@ -31,5 +31,16 @@ ActiveRecord::Schema.define(version: 20140609002911) do
 
   add_index "households", ["email"], name: "index_households_on_email", unique: true
   add_index "households", ["reset_password_token"], name: "index_households_on_reset_password_token", unique: true
+
+  create_table "members", force: true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.text     "task_ratings"
+    t.integer  "household_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "members", ["household_id"], name: "index_members_on_household_id"
 
 end
