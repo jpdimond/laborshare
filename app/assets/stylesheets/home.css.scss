@@ -1,0 +1,52 @@
+@import "foundation_and_overrides";
+
+.home {
+  .branding {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #ff8A1D;
+    font-family: 'Cubano';
+  }
+
+  .branding h3 {
+    color: #6D6D6D;
+    font-family: 'Cubano';
+  }
+
+  .details {
+    margin-top: 100px;
+    h3 {
+      font-family:'Open Sans', sans-serif;
+      font-weight: bold;
+      color: #6D6D6D;
+
+    }
+  }
+
+  .tryit {
+    text-align: center;
+    .button {
+    }
+
+    img {
+      margin-bottom: 20px;
+      margin-right: 33px;
+    }
+  }
+
+@media #{$small-only} {
+  h1 {
+    font-size: 2.0rem;
+  }
+}
+
+@media #{$medium-up} {
+    h1 {
+    font-size: 3.75rem;
+  }
+}
+
+}
