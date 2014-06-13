@@ -26,8 +26,18 @@ based on everyone’s ratings and time. Good dog!</p>
   </div>
   <div class="tryit large-3 columns">
     <%= image_tag("lula.png") %>
-    <a href="#" class="button radius">Try it</a>
+    <a href="<%=new_household_registration_path%>" class="button radius">Try it</a>
   </div>
 
 </div>
+
+<% if household_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_household_session_path, :method => :delete) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_household_session_path)  %>
+  </li>
+<% end %>
 

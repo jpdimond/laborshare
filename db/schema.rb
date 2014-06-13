@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609003608) do
+ActiveRecord::Schema.define(version: 20140613023538) do
 
   create_table "households", force: true do |t|
     t.string   "name",                   default: "temp", null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140609003608) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "members"
   end
 
   add_index "households", ["email"], name: "index_households_on_email", unique: true
